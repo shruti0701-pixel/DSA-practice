@@ -1,0 +1,10 @@
+To find area of rectangle:
+
+
+def area_rectangle (length , breadth):
+        return (length * breadth)
+area1 = area_rectangle (4,5)
+area2 = area_rectangle (3,6)
+sum = area1 + area2
+print("The area of the rectangle is: " + str(sum))
+
