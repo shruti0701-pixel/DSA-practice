@@ -50,6 +50,17 @@ class Solution:
         
         return res
 
-
+                                --------------------- OR-----------------------
+                                
+class Solution:
+    def maximumDifference(self, nums: List[int]) -> int:
+        number = nums[0]
+        result = -1
+        
+        for i in nums:
+            if i > number:
+                result = max(result ,i - number)
+            number = min(number, i)
+        return result
 
 
