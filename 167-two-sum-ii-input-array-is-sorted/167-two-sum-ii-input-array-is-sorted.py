@@ -1,11 +1,26 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        # as the array is sorted we are going to take two pointer approach
         left , right = 0 , len(numbers) - 1
+        
         while left <= right:
-            if numbers[left] + numbers[right] == target:
-                return[left + 1 , right + 1]
-            elif numbers[left] + numbers[right] < target:
-                left += 1
-            else:
+            sums = numbers[left] + numbers[right]
+            
+            if sums == target:
+                break
+            elif sums >= target:
                 right -= 1
-       
+            else:
+                left += 1
+        return [left+1,right + 1]
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
