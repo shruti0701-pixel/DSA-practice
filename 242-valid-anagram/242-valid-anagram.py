@@ -1,9 +1,14 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        #storing up the data in two dictionaries
-        dict1 , dict2 = {} , {}
+        #defaultdic
+        
+        if len(s) != len(t): return False
+        
+        count = collections.defaultdict(int)
         for i in s:
-            dict1[i] = dict1.get(i , 0) + 1
+            count[i] += 1
         for i in t:
-             dict2[i] = dict2.get(i , 0) + 1
-        return dict1 == dict2
+            count[i] -= 1
+            if count[i] < 0:
+                return False
+        return True
