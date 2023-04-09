@@ -1,0 +1,10 @@
+def removeVowels(inputString):
+    sentence = ''
+    vowels= ['a','e','i','o','u','A','E','I','O','U']
+    for i in range(len(inputString)):
+        if inputString[i] not in vowels:
+            sentence+=inputString[i]
+    print (sentence)
+    
+inputString = 'My name is Shruti Paul'
+removeVowels (inputString)
